@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		1C1DB84522295D11001759FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB84422295D11001759FF /* AppDelegate.swift */; };
-		1C1DB84722295D11001759FF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB84622295D11001759FF /* FirstViewController.swift */; };
-		1C1DB84922295D11001759FF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB84822295D11001759FF /* SecondViewController.swift */; };
 		1C1DB84C22295D11001759FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1DB84A22295D11001759FF /* Main.storyboard */; };
 		1C1DB84E22295D16001759FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C1DB84D22295D16001759FF /* Assets.xcassets */; };
 		1C1DB85122295D16001759FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1DB84F22295D16001759FF /* LaunchScreen.storyboard */; };
+		1C1DB85B22295D75001759FF /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB85A22295D75001759FF /* Player.swift */; };
+		1C1DB85E22295DFC001759FF /* playerLibTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB85D22295DFC001759FF /* playerLibTableViewController.swift */; };
+		1C1DB86022295E24001759FF /* newPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB85F22295E24001759FF /* newPlayerViewController.swift */; };
+		1C1DB86422295E95001759FF /* playerProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB86322295E95001759FF /* playerProfileTableViewCell.swift */; };
+		1C1DB86622295F26001759FF /* gameMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB86522295F26001759FF /* gameMenuViewController.swift */; };
+		EC559D77BF95A4F6CF2EC007 /* Pods_testPlayerRealmAndChamelem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD1E0BA12AFF1B0991FEEC7 /* Pods_testPlayerRealmAndChamelem.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C1DB84122295D11001759FF /* testPlayerRealmAndChamelem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPlayerRealmAndChamelem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C1DB84422295D11001759FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C1DB84622295D11001759FF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1C1DB84822295D11001759FF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1C1DB84B22295D11001759FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C1DB84D22295D16001759FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C1DB85022295D16001759FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C1DB85222295D16001759FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C1DB85A22295D75001759FF /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		1C1DB85D22295DFC001759FF /* playerLibTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerLibTableViewController.swift; sourceTree = "<group>"; };
+		1C1DB85F22295E24001759FF /* newPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPlayerViewController.swift; sourceTree = "<group>"; };
+		1C1DB86322295E95001759FF /* playerProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerProfileTableViewCell.swift; sourceTree = "<group>"; };
+		1C1DB86522295F26001759FF /* gameMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameMenuViewController.swift; sourceTree = "<group>"; };
+		5C83E2B702B0D004C2A7A689 /* Pods-testPlayerRealmAndChamelem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlayerRealmAndChamelem.release.xcconfig"; path = "Pods/Target Support Files/Pods-testPlayerRealmAndChamelem/Pods-testPlayerRealmAndChamelem.release.xcconfig"; sourceTree = "<group>"; };
+		9AD1E0BA12AFF1B0991FEEC7 /* Pods_testPlayerRealmAndChamelem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPlayerRealmAndChamelem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB3D76989B96B72C56A05E7 /* Pods-testPlayerRealmAndChamelem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlayerRealmAndChamelem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testPlayerRealmAndChamelem/Pods-testPlayerRealmAndChamelem.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC559D77BF95A4F6CF2EC007 /* Pods_testPlayerRealmAndChamelem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5E9C192E3286C059A146E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AD1E0BA12AFF1B0991FEEC7 /* Pods_testPlayerRealmAndChamelem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1C1DB83822295D11001759FF = {
 			isa = PBXGroup;
 			children = (
 				1C1DB84322295D11001759FF /* testPlayerRealmAndChamelem */,
 				1C1DB84222295D11001759FF /* Products */,
+				BC3BEDA5B2585B9390048B51 /* Pods */,
+				0C5E9C192E3286C059A146E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +78,50 @@
 			isa = PBXGroup;
 			children = (
 				1C1DB84422295D11001759FF /* AppDelegate.swift */,
-				1C1DB84622295D11001759FF /* FirstViewController.swift */,
-				1C1DB84822295D11001759FF /* SecondViewController.swift */,
-				1C1DB84A22295D11001759FF /* Main.storyboard */,
+				1C1DB85C22295DBC001759FF /* Model */,
+				1C1DB85822295D3D001759FF /* Controllers */,
+				1C1DB85922295D55001759FF /* View */,
 				1C1DB84D22295D16001759FF /* Assets.xcassets */,
 				1C1DB84F22295D16001759FF /* LaunchScreen.storyboard */,
 				1C1DB85222295D16001759FF /* Info.plist */,
 			);
 			path = testPlayerRealmAndChamelem;
+			sourceTree = "<group>";
+		};
+		1C1DB85822295D3D001759FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C1DB85D22295DFC001759FF /* playerLibTableViewController.swift */,
+				1C1DB86522295F26001759FF /* gameMenuViewController.swift */,
+				1C1DB85F22295E24001759FF /* newPlayerViewController.swift */,
+				1C1DB86322295E95001759FF /* playerProfileTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1C1DB85922295D55001759FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C1DB84A22295D11001759FF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C1DB85C22295DBC001759FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C1DB85A22295D75001759FF /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC3BEDA5B2585B9390048B51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEB3D76989B96B72C56A05E7 /* Pods-testPlayerRealmAndChamelem.debug.xcconfig */,
+				5C83E2B702B0D004C2A7A689 /* Pods-testPlayerRealmAndChamelem.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C1DB85522295D16001759FF /* Build configuration list for PBXNativeTarget "testPlayerRealmAndChamelem" */;
 			buildPhases = (
+				CD16224577F61F0D8477493C /* [CP] Check Pods Manifest.lock */,
 				1C1DB83D22295D11001759FF /* Sources */,
 				1C1DB83E22295D11001759FF /* Frameworks */,
 				1C1DB83F22295D11001759FF /* Resources */,
+				70031D9C3600D84D99E37AF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +192,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70031D9C3600D84D99E37AF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-testPlayerRealmAndChamelem/Pods-testPlayerRealmAndChamelem-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testPlayerRealmAndChamelem/Pods-testPlayerRealmAndChamelem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD16224577F61F0D8477493C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testPlayerRealmAndChamelem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1C1DB83D22295D11001759FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1DB84922295D11001759FF /* SecondViewController.swift in Sources */,
+				1C1DB85B22295D75001759FF /* Player.swift in Sources */,
+				1C1DB85E22295DFC001759FF /* playerLibTableViewController.swift in Sources */,
+				1C1DB86022295E24001759FF /* newPlayerViewController.swift in Sources */,
+				1C1DB86422295E95001759FF /* playerProfileTableViewCell.swift in Sources */,
 				1C1DB84522295D11001759FF /* AppDelegate.swift in Sources */,
-				1C1DB84722295D11001759FF /* FirstViewController.swift in Sources */,
+				1C1DB86622295F26001759FF /* gameMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +397,7 @@
 		};
 		1C1DB85622295D16001759FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB3D76989B96B72C56A05E7 /* Pods-testPlayerRealmAndChamelem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +416,7 @@
 		};
 		1C1DB85722295D16001759FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C83E2B702B0D004C2A7A689 /* Pods-testPlayerRealmAndChamelem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
