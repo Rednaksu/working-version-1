@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
+    // MARK Chameleon Methods
+    
+//   
+//    var colorArray = NSArray(ofColorsWith:ColorScheme.analogous, with:UIColor.flatRed(), flatScheme:true)
+//    
+    
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

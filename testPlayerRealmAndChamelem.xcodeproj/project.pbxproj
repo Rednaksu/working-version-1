@@ -16,6 +16,7 @@
 		1C1DB86022295E24001759FF /* newPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB85F22295E24001759FF /* newPlayerViewController.swift */; };
 		1C1DB86422295E95001759FF /* playerProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB86322295E95001759FF /* playerProfileTableViewCell.swift */; };
 		1C1DB86622295F26001759FF /* gameMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DB86522295F26001759FF /* gameMenuViewController.swift */; };
+		1CDFFF962232660700232283 /* player-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CDFFF952232660700232283 /* player-1.png */; };
 		EC559D77BF95A4F6CF2EC007 /* Pods_testPlayerRealmAndChamelem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD1E0BA12AFF1B0991FEEC7 /* Pods_testPlayerRealmAndChamelem.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		1C1DB85F22295E24001759FF /* newPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPlayerViewController.swift; sourceTree = "<group>"; };
 		1C1DB86322295E95001759FF /* playerProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerProfileTableViewCell.swift; sourceTree = "<group>"; };
 		1C1DB86522295F26001759FF /* gameMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameMenuViewController.swift; sourceTree = "<group>"; };
+		1CDFFF952232660700232283 /* player-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player-1.png"; sourceTree = "<group>"; };
 		5C83E2B702B0D004C2A7A689 /* Pods-testPlayerRealmAndChamelem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlayerRealmAndChamelem.release.xcconfig"; path = "Pods/Target Support Files/Pods-testPlayerRealmAndChamelem/Pods-testPlayerRealmAndChamelem.release.xcconfig"; sourceTree = "<group>"; };
 		9AD1E0BA12AFF1B0991FEEC7 /* Pods_testPlayerRealmAndChamelem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPlayerRealmAndChamelem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB3D76989B96B72C56A05E7 /* Pods-testPlayerRealmAndChamelem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlayerRealmAndChamelem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testPlayerRealmAndChamelem/Pods-testPlayerRealmAndChamelem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				1C1DB85822295D3D001759FF /* Controllers */,
 				1C1DB85922295D55001759FF /* View */,
 				1C1DB84D22295D16001759FF /* Assets.xcassets */,
+				1CDFFF952232660700232283 /* player-1.png */,
 				1C1DB84F22295D16001759FF /* LaunchScreen.storyboard */,
 				1C1DB85222295D16001759FF /* Info.plist */,
 			);
@@ -186,6 +189,7 @@
 			files = (
 				1C1DB85122295D16001759FF /* LaunchScreen.storyboard in Resources */,
 				1C1DB84E22295D16001759FF /* Assets.xcassets in Resources */,
+				1CDFFF962232660700232283 /* player-1.png in Resources */,
 				1C1DB84C22295D11001759FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

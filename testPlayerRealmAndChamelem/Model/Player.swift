@@ -10,10 +10,13 @@ import Foundation
 import RealmSwift
 
 
+
 class Player: Object {
     
     @objc dynamic var name:String = ""
     
- 
+//    override static func primaryKey() -> String? {
+//        return "name"
+//    }
     
 }

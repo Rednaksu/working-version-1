@@ -9,8 +9,10 @@
 import UIKit
 import Foundation
 import RealmSwift
+import ChameleonFramework
 
-class playerLibTableViewController: UITableViewController {
+class playerLibTableViewController: UITableViewController, UIGestureRecognizerDelegate {
+    //var colorArray =  ColorScheme(rawValue: 2)
     
     let realm = try! Realm()
     
@@ -25,7 +27,16 @@ class playerLibTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       updateAppTheme()
         
+        //MARK: method to move cells with long press
+        
+     
+        
+        
+        
+        
+       //self.navigationController?.hidesNavigationBarHairline = true
        
 
         // Uncomment the following line to preserve selection between presentations
@@ -79,24 +90,33 @@ class playerLibTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            if let player = playerLib?[indexPath.row] {
+                try! realm.write {
+                    realm.delete(player)
+                    
+                }
+            }
+            
+            
+            
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
-    /*
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    */
+    
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -117,19 +137,9 @@ class playerLibTableViewController: UITableViewController {
     */
 
 
-//    func save(category: Player) {
-//        do {
-//            try realm.write {
-//                realm.add(new)
-//            }
-//        } catch {
-//            print("Error saving category \(error)")
-//        }
-//
-//        tableView.reloadData()
-//
-//    }
 
+    
+    //MARK : Realm data ptable reload
     
     func loadPlayerLib() {
         
@@ -139,5 +149,30 @@ class playerLibTableViewController: UITableViewController {
 
   }
 
+    
+    //MARK : Chameleon Methods
+    
+    var selectedColorScheme = ColorScheme.triadic
+    
+    let selectedColor = UIColor.flatBlueColorDark()
+    
+    func updateAppTheme() {
+        Chameleon.setGlobalThemeUsingPrimaryColor(selectedColor, with: .contrast)
+        
+        navigationController?.navigationBar.barTintColor = selectedColor
+        
+        let contrastingColor = UIColor(contrastingBlackOrWhiteColorOn:selectedColor, isFlat: true)
+        
+        navigationController?.navigationBar.titleTextAttributes =
+            [.foregroundColor : contrastingColor as Any]
+        
+        Chameleon.setGlobalThemeUsingPrimaryColor(selectedColor, with: .contrast
+        )
+    }
+
+    // MARK swiping Cells
+    
+    
+    
 }
 
