@@ -15,6 +15,10 @@ class gameMenuViewController: UIViewController {
     
     @IBOutlet weak var toPlayerLibrary: UIButton!
     
+    @IBOutlet weak var startNewGame: UIButton!
+    
+    @IBOutlet weak var willDecideUseLater: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +71,12 @@ class gameMenuViewController: UIViewController {
         
         toPlayerLibrary.layer.masksToBounds = true
         toPlayerLibrary.layer.cornerRadius = 4
+        
+        startNewGame.layer.masksToBounds = true
+        startNewGame.layer.cornerRadius = 4
+        
+        willDecideUseLater.layer.masksToBounds = true
+        willDecideUseLater.layer.cornerRadius = 4
         
         
     }

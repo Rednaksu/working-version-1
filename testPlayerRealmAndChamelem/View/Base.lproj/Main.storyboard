@@ -87,36 +87,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-eH-tIN">
-                                <rect key="frame" x="112.5" y="298.5" width="150" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="JVy-UK-3UN"/>
-                                    <constraint firstAttribute="width" constant="150" id="qsd-D8-HtL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <state key="normal" title="Players Library">
-                                    <color key="titleColor" red="0.23539169132709503" green="0.11543873697519302" blue="0.25115793943405151" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7U8-oh-j3F" kind="show" id="1P6-Jo-a1s"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-q3-dRO">
+                                <rect key="frame" x="112.5" y="218.5" width="150" height="230"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhJ-bM-XWz">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="NtK-Pz-FUY"/>
+                                            <constraint firstAttribute="width" constant="150" id="rtu-Ow-lfM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" red="0.23539169130000001" green="0.115438737" blue="0.25115793939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-eH-tIN">
+                                        <rect key="frame" x="0.0" y="80" width="150" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="JVy-UK-3UN"/>
+                                            <constraint firstAttribute="width" constant="150" id="qsd-D8-HtL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <state key="normal" title="Players Library">
+                                            <color key="titleColor" red="0.23539169132709503" green="0.11543873697519302" blue="0.25115793943405151" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7U8-oh-j3F" kind="show" id="1P6-Jo-a1s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAb-Jd-wOa">
+                                        <rect key="frame" x="0.0" y="160" width="150" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="dSn-7N-kBF"/>
+                                            <constraint firstAttribute="width" constant="150" id="hmL-qj-A6q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <state key="normal" title="Another Button">
+                                            <color key="titleColor" red="0.23539169130000001" green="0.115438737" blue="0.25115793939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Bkq-eH-tIN" firstAttribute="centerX" secondItem="lIV-kW-Cok" secondAttribute="centerX" id="V8h-0P-ZGE"/>
-                            <constraint firstItem="Bkq-eH-tIN" firstAttribute="centerY" secondItem="lIV-kW-Cok" secondAttribute="centerY" id="m3Y-ut-6VK"/>
+                            <constraint firstItem="D4g-q3-dRO" firstAttribute="centerY" secondItem="lIV-kW-Cok" secondAttribute="centerY" id="Oas-7f-UKw"/>
+                            <constraint firstItem="D4g-q3-dRO" firstAttribute="centerX" secondItem="lIV-kW-Cok" secondAttribute="centerX" id="qL3-Nt-oTl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IuQ-Go-OJr"/>
                     </view>
                     <navigationItem key="navigationItem" id="DrM-XE-H6Q"/>
                     <connections>
+                        <outlet property="startNewGame" destination="jhJ-bM-XWz" id="vSm-mg-K4C"/>
                         <outlet property="toPlayerLibrary" destination="Bkq-eH-tIN" id="643-T1-PdL"/>
+                        <outlet property="willDecideUseLater" destination="SAb-Jd-wOa" id="vEf-hf-9cs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9R-9H-s6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2441" y="251"/>
+            <point key="canvasLocation" x="2440.8000000000002" y="250.52473763118442"/>
         </scene>
         <!--New Player View Controller-->
         <scene sceneID="JaL-1j-gT4">
