@@ -94,8 +94,8 @@
 		1C1DB85822295D3D001759FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1C1DB85D22295DFC001759FF /* playerLibTableViewController.swift */,
 				1C1DB86522295F26001759FF /* gameMenuViewController.swift */,
+				1C1DB85D22295DFC001759FF /* playerLibTableViewController.swift */,
 				1C1DB85F22295E24001759FF /* newPlayerViewController.swift */,
 				1C1DB86322295E95001759FF /* playerProfileTableViewCell.swift */,
 			);

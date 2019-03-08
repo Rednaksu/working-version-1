@@ -18,7 +18,12 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
     
    
     var playerLib : Results<Player>?
+    
+    // var activitySwitch: UISwitch!
 
+
+    
+    
     @IBAction func createNewPlayer(_ sender: Any) {
         performSegue(withIdentifier: "toPlayerCreation", sender: self)
         
@@ -27,12 +32,14 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       updateAppTheme()
+      
+       tabFormat()
+
+       
         
         //MARK: method to move cells with long press
         
-     
-        
+ 
         
         
         
@@ -47,8 +54,13 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
     }
     override func viewWillAppear(_ animated: Bool) {
          loadPlayerLib()
+       
     }
 
+    
+    
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -150,28 +162,23 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
   }
 
     
-    //MARK : Chameleon Methods
+
     
-    var selectedColorScheme = ColorScheme.triadic
-    
-    let selectedColor = UIColor.flatBlueColorDark()
-    
-    func updateAppTheme() {
-        Chameleon.setGlobalThemeUsingPrimaryColor(selectedColor, with: .contrast)
-        
-        navigationController?.navigationBar.barTintColor = selectedColor
-        
-        let contrastingColor = UIColor(contrastingBlackOrWhiteColorOn:selectedColor, isFlat: true)
-        
-        navigationController?.navigationBar.titleTextAttributes =
-            [.foregroundColor : contrastingColor as Any]
-        
-        Chameleon.setGlobalThemeUsingPrimaryColor(selectedColor, with: .contrast
-        )
-    }
+
 
     // MARK swiping Cells
     
+ 
+    
+    // Mark: table formatting
+    
+    func tabFormat(){
+        
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.tableView.allowsSelection = false
+    }
+    
+
     
     
 }

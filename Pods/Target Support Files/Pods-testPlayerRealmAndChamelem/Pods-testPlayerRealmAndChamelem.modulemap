@@ -1,0 +1,6 @@
+framework module Pods_testPlayerRealmAndChamelem {
+  umbrella header "Pods-testPlayerRealmAndChamelem-umbrella.h"
+
+  export *
+  module * { export * }
+}

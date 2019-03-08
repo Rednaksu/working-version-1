@@ -11,8 +11,17 @@ import ChameleonFramework
 
 class gameMenuViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var toPlayerLibrary: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateAppTheme()
+        buttonsFormatting()
+        
+        self.navigationController?.hidesNavigationBarHairline = true
 
         // Do any additional setup after loading the view.
     }
@@ -27,5 +36,39 @@ class gameMenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+        //MARK : Chameleon Methods
+    
+   
+    
+    
+    var selectedColorScheme = ColorScheme.triadic
+    
+    let selectedColor = UIColor.flatGray()
+    
+    func updateAppTheme() {
+        Chameleon.setGlobalThemeUsingPrimaryColor(selectedColor, with: .contrast)
+        
+        navigationController?.navigationBar.barTintColor = selectedColor
+        
+        let contrastingColor = UIColor(contrastingBlackOrWhiteColorOn:selectedColor, isFlat: true)
+        
+        navigationController?.navigationBar.titleTextAttributes =
+            [.foregroundColor : contrastingColor as Any]
+        
+        Chameleon.setGlobalThemeUsingPrimaryColor(selectedColor, with: .contrast
+        )
+        
+        view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.frame, andColors: [UIColor.flatGray(),UIColor.flatPlum()])
+    }
+    
+    
+    func buttonsFormatting(){
+        
+        toPlayerLibrary.layer.masksToBounds = true
+        toPlayerLibrary.layer.cornerRadius = 4
+        
+        
+    }
+    
 }

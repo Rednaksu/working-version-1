@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ggx-Ug-MUX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYJ-IV-yBr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -87,25 +87,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-eH-tIN">
-                                <rect key="frame" x="165" y="319" width="45" height="29"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-eH-tIN">
+                                <rect key="frame" x="112.5" y="298.5" width="150" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="JVy-UK-3UN"/>
+                                    <constraint firstAttribute="width" constant="150" id="qsd-D8-HtL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Players Library">
+                                    <color key="titleColor" red="0.23539169132709503" green="0.11543873697519302" blue="0.25115793943405151" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7U8-oh-j3F" kind="show" id="1P6-Jo-a1s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Bkq-eH-tIN" firstAttribute="leading" secondItem="IuQ-Go-OJr" secondAttribute="leading" constant="165" id="Vyo-sb-YIG"/>
-                            <constraint firstItem="Bkq-eH-tIN" firstAttribute="centerY" secondItem="lIV-kW-Cok" secondAttribute="centerY" id="Yzk-2p-apr"/>
-                            <constraint firstItem="Bkq-eH-tIN" firstAttribute="top" secondItem="IuQ-Go-OJr" secondAttribute="top" constant="255" id="onB-wh-Ksr"/>
-                            <constraint firstItem="Bkq-eH-tIN" firstAttribute="centerX" secondItem="lIV-kW-Cok" secondAttribute="centerX" id="vOc-wg-csX"/>
+                            <constraint firstItem="Bkq-eH-tIN" firstAttribute="centerX" secondItem="lIV-kW-Cok" secondAttribute="centerX" id="V8h-0P-ZGE"/>
+                            <constraint firstItem="Bkq-eH-tIN" firstAttribute="centerY" secondItem="lIV-kW-Cok" secondAttribute="centerY" id="m3Y-ut-6VK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IuQ-Go-OJr"/>
                     </view>
                     <navigationItem key="navigationItem" id="DrM-XE-H6Q"/>
+                    <connections>
+                        <outlet property="toPlayerLibrary" destination="Bkq-eH-tIN" id="643-T1-PdL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9R-9H-s6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064.8" y="-436.73163418290858"/>
+            <point key="canvasLocation" x="2441" y="251"/>
         </scene>
         <!--New Player View Controller-->
         <scene sceneID="JaL-1j-gT4">
@@ -157,45 +168,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgS-li-2Pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2004" y="413.3433283358321"/>
+            <point key="canvasLocation" x="4428" y="251"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ZGo-d7-OIf">
+        <scene sceneID="ZrA-Rt-FT0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aGV-YJ-VO2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NYJ-IV-yBr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A5r-zp-lRv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cId-Dm-bY8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kmT-Ci-p1j" kind="relationship" relationship="rootViewController" id="CHv-cy-h4n"/>
+                        <segue destination="kmT-Ci-p1j" kind="relationship" relationship="rootViewController" id="T0t-Cg-fOC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sRP-eE-Vb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1F-9I-cTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125.59999999999999" y="-436.73163418290858"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wXr-vx-rlK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenKeyboardAppears="YES" id="ggx-Ug-MUX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n98-yH-EWK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="7U8-oh-j3F" kind="relationship" relationship="rootViewController" id="IBv-Cf-44h"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nvz-Rh-YPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3868" y="1199"/>
+            <point key="canvasLocation" x="1358" y="272"/>
         </scene>
     </scenes>
     <resources>

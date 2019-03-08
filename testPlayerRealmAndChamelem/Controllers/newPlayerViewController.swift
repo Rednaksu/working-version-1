@@ -16,6 +16,7 @@ class newPlayerViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var insertPlayerName: UITextField!{
         didSet{
             insertPlayerName.delegate = self
+            
         }
     }
     
@@ -27,17 +28,13 @@ class newPlayerViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playerAvatar.layer.masksToBounds = true
-        playerAvatar.layer.cornerRadius = playerAvatar.frame.height/2
-        playerAvatar.layer.borderWidth = 1
-        playerAvatar.backgroundColor = UIColor.flatWhite()
+        viewFormatting()
         
-        
-        view.backgroundColor = UIColor(gradientStyle: .radial, withFrame: view.frame, andColors: [UIColor.flatRed(),UIColor.flatPlum()])
+    
         
         
         
-//        self.navigationController?.hidesNavigationBarHairline = true
+        
         
         // Do any additional setup after loading the view.
     }
@@ -62,6 +59,10 @@ navigationController?.popViewController(animated: true)
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
+         // Mark: moving view up when keayboard appears
+        
+    navigationController?.setNavigationBarHidden(false, animated: true)
         return true
     }
     
@@ -75,5 +76,23 @@ navigationController?.popViewController(animated: true)
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func viewFormatting(){
+        
+        self.navigationController?.hidesNavigationBarHairline = true
+        
+        playerAvatar.layer.masksToBounds = true
+        playerAvatar.layer.cornerRadius = playerAvatar.frame.height/2
+        playerAvatar.layer.borderWidth = 0.5
+        playerAvatar.backgroundColor = UIColor.flatWhite()
+        
+        
+        view.backgroundColor = UIColor(gradientStyle: .radial, withFrame: view.frame, andColors: [UIColor.flatGray(),UIColor.flatGray(),UIColor.flatGray(),UIColor.flatPlum()])
+        insertPlayerName.layer.masksToBounds = true
+        insertPlayerName.layer.cornerRadius = 8
+        insertPlayerName.layer.borderWidth = 0.5
+        insertPlayerName.backgroundColor = UIColor.flatWhite()
+        
+    }
 
 }
