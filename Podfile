@@ -12,6 +12,8 @@ pod 'Kingfisher'
 
 pod 'SnapKit'
 
+pod 'DZNEmptyDataSet'
+
   # Pods for testPlayerRealmAndChamelem
 
 end
