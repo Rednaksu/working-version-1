@@ -1,29 +1,24 @@
 //
-//  playerProfileTableViewCell.swift
+//  PlayableRolesTableViewCell.swift
 //  testPlayerRealmAndChamelem
 //
-//  Created by skander lakhal on 3/1/19.
+//  Created by skander lakhal on 3/11/19.
 //  Copyright © 2019 REDRebelRiots. All rights reserved.
 //
 
 import UIKit
 
-class playerProfileTableViewCell: UITableViewCell {
-
+class PlayableRolesTableViewCell: UITableViewCell {
+    @IBOutlet weak var roleAvatar: UIImageView!
     
-    @IBOutlet weak var playerAvatar: UIImageView!
+    @IBOutlet weak var roleLabel: UILabel!
     
-    @IBOutlet weak var playerName: UILabel!
-    
-    @IBOutlet weak var playerActivity: UISwitch!
-    
+    @IBAction func roleIsActive(_ sender: UISwitch) {
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    
-        
-          
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

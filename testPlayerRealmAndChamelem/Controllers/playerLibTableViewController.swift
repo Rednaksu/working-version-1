@@ -10,19 +10,19 @@ import UIKit
 import Foundation
 import RealmSwift
 import ChameleonFramework
+import Kingfisher
 
 class playerLibTableViewController: UITableViewController, UIGestureRecognizerDelegate {
     //var colorArray =  ColorScheme(rawValue: 2)
     
     let realm = try! Realm()
     
-   
+
+    
     var playerLib : Results<Player>?
-    
-    // var activitySwitch: UISwitch!
+    var avatarUrl = URL(string: "")
 
 
-    
     
     @IBAction func createNewPlayer(_ sender: Any) {
         performSegue(withIdentifier: "toPlayerCreation", sender: self)
@@ -32,18 +32,20 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+      self.tableView.tableFooterView = UIView()
        tabFormat()
 
        
         
         //MARK: method to move cells with long press
         
+        
+        
  
         
         
         
-       //self.navigationController?.hidesNavigationBarHairline = true
+       self.navigationController?.hidesNavigationBarHairline = true
        
 
         // Uncomment the following line to preserve selection between presentations
@@ -80,15 +82,23 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "playerProfile", for: indexPath)
+                let cell = tableView.dequeueReusableCell(withIdentifier: "playerProfile", for: indexPath) as! playerProfileTableViewCell
         
 //        let cell = super.tableView(tableView, cellForRowAt: indexPath)
 //
 //        if let gamer = playerLib?[indexPath.row] {
+       
         
-        cell.textLabel?.text = playerLib?[indexPath.row].name ?? "No players Added Yet"
-            
-            
+        avatarUrl = URL(string:(playerLib?[indexPath.row].avatarURL)!)
+        
+        cell.playerName?.text = playerLib?[indexPath.row].name ?? "No players Added Yet"
+        cell.playerAvatar.kf.setImage(with:avatarUrl)
+        
+        cell.playerAvatar.layer.masksToBounds = true
+        cell.playerAvatar.layer.cornerRadius = cell.playerAvatar.frame.height/4
+        cell.playerAvatar.layer.borderWidth = 2
+        cell.playerAvatar.layer.borderColor = UIColor.flatWhite()?.cgColor
+        
         
         return cell
     }
@@ -109,27 +119,30 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
             if let player = playerLib?[indexPath.row] {
                 try! realm.write {
                     realm.delete(player)
-                    
+                   
                 }
             }
             
-            
+        
             
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
+            
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+    loadPlayerLib()
     }
     
 
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+ 
     }
     
 
+    
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -158,6 +171,8 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
       playerLib  = realm.objects(Player.self)
 
       tableView.reloadData()
+     
+        
 
   }
 
@@ -174,11 +189,16 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
     
     func tabFormat(){
         
-        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+       self.tableView.separatorColor = UIColor.flatWhite()
+     
         self.tableView.allowsSelection = false
+        
+        
+        
     }
     
-
+    
     
     
 }

@@ -46,9 +46,9 @@ class gameMenuViewController: UIViewController {
    
     
     
-    var selectedColorScheme = ColorScheme.triadic
+    var selectedColorScheme = ColorScheme.complementary
     
-    let selectedColor = UIColor.flatGray()
+    let selectedColor = UIColor.flatBlue()
     
     func updateAppTheme() {
         Chameleon.setGlobalThemeUsingPrimaryColor(selectedColor, with: .contrast)
@@ -63,7 +63,7 @@ class gameMenuViewController: UIViewController {
         Chameleon.setGlobalThemeUsingPrimaryColor(selectedColor, with: .contrast
         )
         
-        view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.frame, andColors: [UIColor.flatGray(),UIColor.flatPlum()])
+        view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.frame, andColors: [UIColor.flatRedColorDark(),UIColor.flatPlum()])
     }
     
     

@@ -8,6 +8,9 @@ target 'testPlayerRealmAndChamelem' do
 pod 'RealmSwift'
 pod 'ChameleonFramework'
 
+pod 'Kingfisher'
+
+pod 'SnapKit'
 
   # Pods for testPlayerRealmAndChamelem
 
