@@ -127,6 +127,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <state key="normal" title="Another Button"/>
+                                        <connections>
+                                            <segue destination="uFN-GH-ue3" kind="show" id="u3h-g3-Hs1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -290,6 +293,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rmf-il-XfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2440.8000000000002" y="1161.7691154422789"/>
+        </scene>
+        <!--Selected Players For Game Session Table View Controller-->
+        <scene sceneID="IGh-mb-nRV">
+            <objects>
+                <tableViewController id="uFN-GH-ue3" customClass="selectedPlayersForGameSessionTableViewController" customModule="testPlayerRealmAndChamelem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8te-wO-Erx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="selectedPlayers" rowHeight="90" id="xRN-xC-iw0" customClass="selectedPlayersForGameSessionTableViewCell" customModule="testPlayerRealmAndChamelem" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xRN-xC-iw0" id="dvO-JT-swe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="death.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ddc-ch-cx8">
+                                            <rect key="frame" x="11" y="11" width="68" height="68"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="68" id="Xuj-RS-ChG"/>
+                                                <constraint firstAttribute="height" constant="68" id="qeY-xD-Bhw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cih-Yu-pD5">
+                                            <rect key="frame" x="161.5" y="33" width="52" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ddc-ch-cx8" firstAttribute="leading" secondItem="dvO-JT-swe" secondAttribute="leading" constant="11" id="2mR-EU-FUV"/>
+                                        <constraint firstItem="Cih-Yu-pD5" firstAttribute="centerY" secondItem="dvO-JT-swe" secondAttribute="centerY" id="bAn-Dg-Ck0"/>
+                                        <constraint firstItem="Cih-Yu-pD5" firstAttribute="centerX" secondItem="dvO-JT-swe" secondAttribute="centerX" id="bgY-BL-yoQ"/>
+                                        <constraint firstItem="Ddc-ch-cx8" firstAttribute="top" secondItem="dvO-JT-swe" secondAttribute="top" constant="11" id="f6y-HT-4JE"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ddc-ch-cx8" secondAttribute="bottom" constant="10.5" id="nxX-y9-TLE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.59489071370000002" green="0.74986636640000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="playerAvatar" destination="Ddc-ch-cx8" id="NRC-iN-68W"/>
+                                    <outlet property="playerName" destination="Cih-Yu-pD5" id="stH-3H-Q7e"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uFN-GH-ue3" id="3s2-yX-iGj"/>
+                            <outlet property="delegate" destination="uFN-GH-ue3" id="55a-57-szf"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXX-G3-Ri5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3144.8000000000002" y="1724.8875562218891"/>
         </scene>
     </scenes>
     <resources>

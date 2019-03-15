@@ -10,9 +10,9 @@ pod 'ChameleonFramework'
 
 pod 'Kingfisher'
 
-pod 'SnapKit'
 
-pod 'DZNEmptyDataSet'
+
+
 
   # Pods for testPlayerRealmAndChamelem
 

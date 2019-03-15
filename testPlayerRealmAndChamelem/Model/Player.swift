@@ -16,6 +16,7 @@ class Player: Object {
     @objc dynamic var name:String = ""
     @objc dynamic var inGameSession:Bool = true
     @objc dynamic var avatarURL = ""
+    @objc dynamic var order = 0
     
 //    override static func primaryKey() -> String? {
 //        return "name"

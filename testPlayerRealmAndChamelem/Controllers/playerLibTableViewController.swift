@@ -98,7 +98,8 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
         cell.playerAvatar.layer.cornerRadius = cell.playerAvatar.frame.height/4
         cell.playerAvatar.layer.borderWidth = 2
         cell.playerAvatar.layer.borderColor = UIColor.flatWhite()?.cgColor
-        
+//        cell.layer.masksToBounds = true
+//        cell.layer.cornerRadius = cell.layer.frame.height/4
         
         return cell
     }
@@ -191,6 +192,7 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
        self.tableView.separatorColor = UIColor.flatWhite()
+     
      
         self.tableView.allowsSelection = false
         

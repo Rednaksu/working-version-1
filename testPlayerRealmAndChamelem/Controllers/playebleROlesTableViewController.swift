@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import SnapKit
-import SceneKit
+
 
 
 class playebleROlesTableViewController: UITableViewController {
-    
+   
+  
     
 //    let box = UIView()
 //    superview.addSubview(box)
@@ -26,7 +26,11 @@ class playebleROlesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+  tableView.backgroundColor = UIColor.flatWhite()
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        self.tableView.separatorColor = UIColor.flatWhite()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -54,7 +58,12 @@ class playebleROlesTableViewController: UITableViewController {
         cell.roleAvatar?.image = UIImage(named: (playableRoles[indexPath.row])) ?? UIImage(named:"death")
         
         // Configure the cell...
-
+        
+//        cell.layer.masksToBounds = true
+//        cell.layer.cornerRadius = cell.layer.frame.height/4
+      
+        
+        
         return cell
     }
  

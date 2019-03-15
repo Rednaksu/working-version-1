@@ -35,9 +35,11 @@
 		1C47A3C72239468800A927CE /* Priest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C47A3C62239468700A927CE /* Priest.png */; };
 		1C47A3C92239469100A927CE /* Carpenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C47A3C82239469000A927CE /* Carpenter.png */; };
 		1C47A3CB2239469800A927CE /* Trader.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C47A3CA2239469800A927CE /* Trader.png */; };
+		1C47A3CF223C0F1200A927CE /* selectedPlayersForGameSessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47A3CE223C0F1200A927CE /* selectedPlayersForGameSessionTableViewController.swift */; };
+		1C47A3D1223C104A00A927CE /* selectedPlayersForGameSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47A3D0223C104A00A927CE /* selectedPlayersForGameSessionTableViewCell.swift */; };
+		1C47A3D3223C227700A927CE /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C47A3D2223C227600A927CE /* add.png */; };
 		1CB436282236E1D50052C59F /* playebleROlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB436272236E1D50052C59F /* playebleROlesTableViewController.swift */; };
 		1CB4362A2236E5240052C59F /* PlayableRolesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB436292236E5240052C59F /* PlayableRolesTableViewCell.swift */; };
-		1CB4362C2236E86B0052C59F /* fang.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB4362B2236E86B0052C59F /* fang.png */; };
 		1CDFFF962232660700232283 /* player-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CDFFF952232660700232283 /* player-1.png */; };
 		EC559D77BF95A4F6CF2EC007 /* Pods_testPlayerRealmAndChamelem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD1E0BA12AFF1B0991FEEC7 /* Pods_testPlayerRealmAndChamelem.framework */; };
 /* End PBXBuildFile section */
@@ -73,9 +75,11 @@
 		1C47A3C62239468700A927CE /* Priest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Priest.png; sourceTree = "<group>"; };
 		1C47A3C82239469000A927CE /* Carpenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Carpenter.png; sourceTree = "<group>"; };
 		1C47A3CA2239469800A927CE /* Trader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trader.png; sourceTree = "<group>"; };
+		1C47A3CE223C0F1200A927CE /* selectedPlayersForGameSessionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectedPlayersForGameSessionTableViewController.swift; sourceTree = "<group>"; };
+		1C47A3D0223C104A00A927CE /* selectedPlayersForGameSessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectedPlayersForGameSessionTableViewCell.swift; sourceTree = "<group>"; };
+		1C47A3D2223C227600A927CE /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		1CB436272236E1D50052C59F /* playebleROlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playebleROlesTableViewController.swift; sourceTree = "<group>"; };
 		1CB436292236E5240052C59F /* PlayableRolesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableRolesTableViewCell.swift; sourceTree = "<group>"; };
-		1CB4362B2236E86B0052C59F /* fang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fang.png; sourceTree = "<group>"; };
 		1CDFFF952232660700232283 /* player-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player-1.png"; sourceTree = "<group>"; };
 		5C83E2B702B0D004C2A7A689 /* Pods-testPlayerRealmAndChamelem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPlayerRealmAndChamelem.release.xcconfig"; path = "Pods/Target Support Files/Pods-testPlayerRealmAndChamelem/Pods-testPlayerRealmAndChamelem.release.xcconfig"; sourceTree = "<group>"; };
 		9AD1E0BA12AFF1B0991FEEC7 /* Pods_testPlayerRealmAndChamelem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPlayerRealmAndChamelem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +132,48 @@
 				1C1DB85822295D3D001759FF /* Controllers */,
 				1C1DB85922295D55001759FF /* View */,
 				1C1DB84D22295D16001759FF /* Assets.xcassets */,
-				1CB4362B2236E86B0052C59F /* fang.png */,
+				1C47A3CD223BFAF200A927CE /* roRolesPics */,
+				1C1DB84F22295D16001759FF /* LaunchScreen.storyboard */,
+				1C1DB85222295D16001759FF /* Info.plist */,
+			);
+			path = testPlayerRealmAndChamelem;
+			sourceTree = "<group>";
+		};
+		1C1DB85822295D3D001759FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C1DB86522295F26001759FF /* gameMenuViewController.swift */,
+				1C1DB85D22295DFC001759FF /* playerLibTableViewController.swift */,
+				1C1DB85F22295E24001759FF /* newPlayerViewController.swift */,
+				1C1DB86322295E95001759FF /* playerProfileTableViewCell.swift */,
+				1CB436272236E1D50052C59F /* playebleROlesTableViewController.swift */,
+				1CB436292236E5240052C59F /* PlayableRolesTableViewCell.swift */,
+				1C47A3CE223C0F1200A927CE /* selectedPlayersForGameSessionTableViewController.swift */,
+				1C47A3D0223C104A00A927CE /* selectedPlayersForGameSessionTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1C1DB85922295D55001759FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C1DB84A22295D11001759FF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C1DB85C22295DBC001759FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C1DB85A22295D75001759FF /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C47A3CD223BFAF200A927CE /* roRolesPics */ = {
+			isa = PBXGroup;
+			children = (
+				1C47A3D2223C227600A927CE /* add.png */,
 				1C47A3B1223942C000A927CE /* Chaman.png */,
 				1C47A3AA223942BF00A927CE /* Crusader.png */,
 				1C47A3A422393FC700A927CE /* death.png */,
@@ -149,39 +194,8 @@
 				1C47A3AF223942C000A927CE /* Villager.png */,
 				1C47A3AE223942C000A927CE /* Virgin.png */,
 				1C47A3AB223942BF00A927CE /* Werewolf.png */,
-				1C1DB84F22295D16001759FF /* LaunchScreen.storyboard */,
-				1C1DB85222295D16001759FF /* Info.plist */,
 			);
-			path = testPlayerRealmAndChamelem;
-			sourceTree = "<group>";
-		};
-		1C1DB85822295D3D001759FF /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1C1DB86522295F26001759FF /* gameMenuViewController.swift */,
-				1C1DB85D22295DFC001759FF /* playerLibTableViewController.swift */,
-				1C1DB85F22295E24001759FF /* newPlayerViewController.swift */,
-				1C1DB86322295E95001759FF /* playerProfileTableViewCell.swift */,
-				1CB436272236E1D50052C59F /* playebleROlesTableViewController.swift */,
-				1CB436292236E5240052C59F /* PlayableRolesTableViewCell.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		1C1DB85922295D55001759FF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1C1DB84A22295D11001759FF /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		1C1DB85C22295DBC001759FF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1C1DB85A22295D75001759FF /* Player.swift */,
-			);
-			path = Model;
+			path = roRolesPics;
 			sourceTree = "<group>";
 		};
 		BC3BEDA5B2585B9390048B51 /* Pods */ = {
@@ -256,6 +270,7 @@
 				1C1DB85122295D16001759FF /* LaunchScreen.storyboard in Resources */,
 				1C1DB84E22295D16001759FF /* Assets.xcassets in Resources */,
 				1C47A3C32239467900A927CE /* Happy Trigger.png in Resources */,
+				1C47A3D3223C227700A927CE /* add.png in Resources */,
 				1C47A3B9223942C000A927CE /* Tinker.png in Resources */,
 				1C47A3B8223942C000A927CE /* Goul.png in Resources */,
 				1CDFFF962232660700232283 /* player-1.png in Resources */,
@@ -276,7 +291,6 @@
 				1C47A3C52239468200A927CE /* Little Boy.png in Resources */,
 				1C47A3B7223942C000A927CE /* Werewolf.png in Resources */,
 				1C47A3BF2239432B00A927CE /* Dracula.png in Resources */,
-				1CB4362C2236E86B0052C59F /* fang.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,22 +307,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-testPlayerRealmAndChamelem/Pods-testPlayerRealmAndChamelem-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -344,8 +354,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C47A3D1223C104A00A927CE /* selectedPlayersForGameSessionTableViewCell.swift in Sources */,
 				1C1DB85B22295D75001759FF /* Player.swift in Sources */,
 				1C1DB85E22295DFC001759FF /* playerLibTableViewController.swift in Sources */,
+				1C47A3CF223C0F1200A927CE /* selectedPlayersForGameSessionTableViewController.swift in Sources */,
 				1CB4362A2236E5240052C59F /* PlayableRolesTableViewCell.swift in Sources */,
 				1CB436282236E1D50052C59F /* playebleROlesTableViewController.swift in Sources */,
 				1C1DB86022295E24001759FF /* newPlayerViewController.swift in Sources */,
