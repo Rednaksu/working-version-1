@@ -12,7 +12,7 @@ import RealmSwift
 import ChameleonFramework
 import Kingfisher
 
-class playerLibTableViewController: UITableViewController, UIGestureRecognizerDelegate {
+class playerLibTableViewController: UITableViewController, UIGestureRecognizerDelegate,switchProtocol {
     //var colorArray =  ColorScheme(rawValue: 2)
     
     let realm = try! Realm()
@@ -89,6 +89,9 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
 //        if let gamer = playerLib?[indexPath.row] {
        
         
+        // the sell is its self delegate // enables using the switch protocol
+        cell.delegate = self
+        
         avatarUrl = URL(string:(playerLib?[indexPath.row].avatarURL)!)
         
         cell.playerName?.text = playerLib?[indexPath.row].name ?? "No players Added Yet"
@@ -98,8 +101,16 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
         cell.playerAvatar.layer.cornerRadius = cell.playerAvatar.frame.height/4
         cell.playerAvatar.layer.borderWidth = 2
         cell.playerAvatar.layer.borderColor = UIColor.flatWhite()?.cgColor
+       
+        // calling switch via protocol / func in cell
+        
+        cell.activitySwitch.setOn((playerLib?[indexPath.row].inGameSession)!, animated: true)
+        
+        
 //        cell.layer.masksToBounds = true
 //        cell.layer.cornerRadius = cell.layer.frame.height/4
+        
+       
         
         return cell
     }
@@ -200,8 +211,18 @@ class playerLibTableViewController: UITableViewController, UIGestureRecognizerDe
         
     }
     
+    // switch func persist
     
-    
+    func didTapSwitch(cell: playerProfileTableViewCell) {
+        let indexPath = tableView.indexPath(for: cell)
+        do {
+            try realm.write {
+                playerLib?[indexPath!.row].inGameSession = cell.activitySwitch.isOn
+            }
+        } catch{
+            print("Error saving switch status\(error)")
+        }
+    }
     
 }
 
